@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol Calculator</title>
+</head>
+<body>
+    <p>Basic Salary</p>
+    <p>House Allowance</p>
+    <p>Risk Allowance</p>
+    <p>Medical Allowance</p>
+    <table>
+        <tr>
+            <th>Cross</th>
+            <th>PAYE</th>
+            <th>NHIF</th>
+            <th>NSSF</th>
+        </tr>
+        <tr>
+            <td>500000 Above</td>
+            <td>30%</td>
+            <td>10%</td>
+            <td>10%</td>
+        </tr>
+        <tr>
+            <td>100000-500000</td>
+            <td>25%</td>
+            <td>7%</td>
+            <td>7%</td>
+        </tr>
+        <tr>
+            <td>50000-100000</td>
+            <td>20%</td>
+            <td>5%</td>
+            <td>5%</td>
+        </tr>
+        <tr>
+            <td>10000-50000</td>
+            <td>15%</td>
+            <td>3%</td>
+            <td>3%</td>
+        </tr>
+        <tr>
+            <td>10000 below</td>
+            <td>0%</td>
+            <td>0%</td>
+            <td>0%</td>
+        </tr>
+        
+    </table><br>
+    <label for="basicSalary">Basic Salary:</label>
+    <input type="text" id="basicSalary"><br><br>
+
+    <label for="houseAllowance">House Allowance:</label>
+    <input type="text" id="houseAllowance"><br><br>
+
+    <label for="riskAllowance">Risk Allowance:</label>
+    <input type="text" id="riskAllowance"><br><br>
+
+    <label for="medicalAllowance">Medical Allowance:</label>
+    <input type="text" id="medicalAllowance"><br><br>
+
+    <button onclick="calculate()">Calculate</button><br><br>
+
+    <label for="paye">PAYE:</label>
+    <input type="text" id="paye" readonly><br><br>
+
+    <label for="nhif">NHIF:</label>
+    <input type="text" id="nhif" readonly><br><br>
+
+    <label for="nssf">NSSF:</label>
+    <input type="text" id="nssf" readonly><br><br>
+
+    <script>
+        function calculate() {
+            const basicSalary = parseFloat(document.getElementById("basicSalary").value);
+            const houseAllowance = parseFloat(document.getElementById("houseAllowance").value);
+            const riskAllowance = parseFloat(document.getElementById("riskAllowance").value);
+            const medicalAllowance = parseFloat(document.getElementById("medicalAllowance").value);
+
+            const totalIncome = basicSalary + houseAllowance + riskAllowance + medicalAllowance;
+
+            let paye, nhif, nssf;
+
+            if (totalIncome > 500000) {
+                paye = totalIncome * 0.3;
+                nhif = totalIncome * 0.1;
+                nssf = totalIncome * 0.1;
+            } else if (totalIncome >= 100000 && totalIncome <= 500000) {
+                paye = totalIncome * 0.25;
+                nhif = totalIncome * 0.07;
+                nssf = totalIncome * 0.07;
+            } else {
+                paye = 0;
+                nhif = 0;
+                nssf = 0;
+            }
+
+            document.getElementById("paye").value = paye.toFixed(2);
+            document.getElementById("nhif").value = nhif.toFixed(2);
+            document.getElementById("nssf").value = nssf.toFixed(2);
+        }
+    </script>
+</body>
+</html>

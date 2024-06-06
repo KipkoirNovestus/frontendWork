@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Fuction</title>
+</head>
+<body>
+
+    <input type="text" id="fn"><br><br>
+    <input type="text" id="sn"><br><br>
+    <button onclick="Calculate()">Calculate</button><br><br>
+    <input type="text" id="ons">
+
+    <p id="msg"></p>
+    <script>
+        //let text = () => "Hello world"
+        //document.getElementById("msg").innerHTML=text()
+
+        // let xyz = (a,b) => {
+        //     return a * b
+        // }
+        // document.getElementById("msg").innerHTML = xyz(7,4)
+
+        let Calculate = () =>{
+            var x = parseFloat(document.getElementById("fn").value)
+            var y = parseFloat(document.getElementById("sn").value)
+            var xyz = x+y
+            document.getElementById("ons").value = xyz
+        }
+       
+        
+    </script>
+    
+    
+</body>
+</html>

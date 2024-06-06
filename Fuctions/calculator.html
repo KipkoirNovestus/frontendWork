@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="text" id="fn"><br><br>
+    <input type="text" id="sn"><br><br>
+    <button onclick="add()">+</button><br><br>
+    <button onclick="subtruct()">-</button><br><br>
+    <button onclick="devide()">/</button><br><br>
+    <button onclick="mult()">*</button><br><br>
+    <input type="text" id="anw">
+
+    <script>
+        let add = () =>{
+            var x = parseFloat(document.getElementById("fn").value)
+            var y = parseFloat(document.getElementById("sn").value)
+            var xyz = x+y
+       
+        document.getElementById("anw").value = xyz
+    }
+        let subtruct = () =>{
+            var z = parseFloat(document.getElementById("fn").value)
+            var v = parseFloat(document.getElementById("sn").value)
+            var aaa = z-v
+            document.getElementById("anw").value = aaa
+
+        }
+       
+        let devide = () =>{
+            var a = parseFloat(document.getElementById("fn").value)
+            var b = parseFloat(document.getElementById("sn").value)
+            var bbb = a/b
+        document.getElementById("anw").value = bbb
+
+        }
+
+        let mult = () =>{
+            var g = parseFloat(document.getElementById("fn").value)
+            var f = parseFloat(document.getElementById("sn").value)
+            var ccc = g*f
+        document.getElementById("anw").value = ccc
+
+        }
+       
+    </script>
+    
+</body>
+</html>

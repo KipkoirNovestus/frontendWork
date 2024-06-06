@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </head>
+      <body>
+      <div class="topnav">
+        <a id="hm" ><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        <a id="ab"><i class="fa fa-check-circle-o" aria-hidden="true"></i>About</a>
+        <a id="ed"><i class="fa fa-graduation-cap" aria-hidden="true"></i></i>Education</a>
+        <a id="ct"><i class="fa fa-address-book" aria-hidden="true"></i></i>Contact</a>
+      </div>
+
+      <div id="home">
+        <h2>Home Page</h2>
+        <div>
+            <h3>My Profile</h3>
+            <img src="images/download.jpg" alt="Novestus Kipkorir">
+          </div>
+          <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, consequatur eos! Nihil eos in ipsa eius dolorem, 
+                expedita placeat, 
+                natus inventore id praesentium dolorum repellat earum autem quasi est provident?</p>
+          </div>
+      </div>
+
+
+      <!-- About page-->
+        <div  id="about" class="page">
+        <h2 id="">About Page</h2>
+        <div>
+            <h2>About</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, consequatur eos! Nihil eos in ipsa eius dolorem, 
+                expedita placeat, 
+                natus inventore id praesentium dolorum repellat earum autem quasi est provident?</p>
+          </div>
+          <div>
+            <h2>Siblings</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, consequatur eos! Nihil eos in ipsa eius dolorem, 
+                expedita placeat, 
+                natus inventore id praesentium dolorum repellat earum autem quasi est provident?</p>
+          </div>
+          <div>
+            <h2>Age</h2>
+            <p>I'm just 87years Old.</p>
+          </div>
+      </div>
+
+      
+      <!-- Education page -->
+      <div id="education" class="page">
+        <h2>Education Page</h2>
+        <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, consequatur eos! Nihil eos in ipsa eius dolorem, 
+                expedita placeat, 
+                natus inventore id praesentium dolorum repellat earum autem quasi est provident?</p>
+          </div>
+          <div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, consequatur eos! Nihil eos in ipsa eius dolorem, 
+                expedita placeat, 
+                natus inventore id praesentium dolorum repellat earum autem quasi est provident?</p>
+          </div>
+      </div>        
+
+      <!-- contact page -->
+      <div id="contact" class="page">
+        <h2>Contact Page</h2>
+        <form action="">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname"><br><br>
+            <label for="fname">Second Name:</label>
+            <input type="text" id="sname"><br><br>
+            <label for="fname">Email:</label>
+            <input type="text" id="email"><br><br>
+            <button>Submit</button>
+          </form>
+      </div>
+
+
+      <!-- Javascript -->
+      <script>
+        $(document).ready(function(){
+                $("#hm").click(function(){
+                    $("#home").show()
+                    $("page").hide()
+                })
+            })
+
+      </script>
+      
+      
+      
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPA</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        #hidden{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Jquery select items via ID(#), name(p) and classe(.) -->
+    <p id="hidden">I love this!!</p>
+    <p class="" id="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam similique, 
+        vero quis expedita debitis quidem totam nihil nemo temporibus ut pariatur impedit alias suscipit? 
+        Ex voluptas voluptates minus maxime blanditiis.</p>
+        <button>Hide</button>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    $("#hidden").show()
+                    $("#txt").hide()
+                })
+            })
+        </script>
+    
+</body>
+</html>
